@@ -1,0 +1,5 @@
+---
+# tasks file for utils
+- name: Install common utils
+  yum: name={{ item }} state=installed update_cache=yes
+  with_items: "{{ packages }}"
